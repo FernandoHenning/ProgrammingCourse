@@ -5,19 +5,19 @@ cinturon_por_alumno = {}
 
 
 def obtener_cinturon(kihon: int, katas: int, kumite: int, mental: int) -> str:
-    if (kihon == 1) and (katas == 1) and (kumite == 1) and (mental == 1):
-        return "Blanco"
-    elif (kihon == 2) and (katas == 2) and (kumite == 2) and (mental == 2):
-        return "Amarillo"
-    elif (kihon == 3) and (katas == 3) and (kumite == 3) and (mental == 3):
-        return "Naranja"
-    elif (kihon == 4) and (katas == 4) and (kumite == 4) and (mental == 4):
-        return "Verde"
-    elif (kihon == 5) and (katas == 5) and (kumite == 5) and (mental == 5):
-        return "Azul"
-    elif (kihon == 6) and (katas == 6) and (kumite == 6) and (mental == 6):
-        return "Marrón"
-    elif (kihon == 7) and (katas == 7) and (kumite == 7) and (mental == 7):
+    puntaje = (kihon * 0.2) + (katas * 0.3) + (kumite * 0.3) + (mental * 0.2)
+    
+    if puntaje >= 6.5:
         return "Negro"
+    elif puntaje >= 5.5:
+        return "Marrón"
+    elif puntaje >= 4.5:
+        return "Azul"
+    elif puntaje >= 3.5:
+        return "Verde"
+    elif puntaje >= 2.5:
+        return "Naranja"
+    elif puntaje >= 1.5:
+        return "Amarillo"
     else:
-        return "No califica para un cinturón estándar"
+        return "Blanco"
